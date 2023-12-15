@@ -3,9 +3,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 import itertools
-
 from collections import Counter
-
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

@@ -83,8 +83,7 @@ class AVDBParser(AbstractDatasetParser):
             arousal_per_clip = []
             for i in progresser:
                 datas = markup_file.readline().strip().split()
-                # im_path = os.path.join(self.dataset_root, datas[0]) ##################################################
-                im_path = os.path.join(self.dataset_root, datas[0]).replace('\\', '/') 
+                im_path = os.path.join(self.dataset_root, datas[0])
                 wav_path = None
                 valence = float(datas[1])
                 arousal = float(datas[2])
@@ -108,8 +107,7 @@ class AVDBParser(AbstractDatasetParser):
                         wav_path = (
                             os.path.dirname(im_path.replace("Video", "Audio"))
                             .replace(".mp4", ".wav")
-                            .replace("\\01", "\\03")
-                            #.replace("\\01", "\\03")   ##################################################
+                            .replace("/01", "/03")
                         )
                     elif "OMGEmotionChallenge" in im_path:
                         wav_path = (
