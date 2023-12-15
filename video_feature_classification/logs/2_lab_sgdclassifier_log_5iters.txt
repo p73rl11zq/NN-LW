@@ -1,0 +1,196 @@
+(obuchaem) specialo0@DESKTOP-UFQ15AK:~/notebooks/uchебновое/neural_n/labs$ python ./labs/video_feature_classification/main_sss.py
+AVDB meta parsing: 100%|████████████████████████████████████████████████████████████████████████████| 33087/33087 [00:21<00:00, 1513.04images/s]
+clips count: 1120
+frames count: 33087
+AVDB meta parsing: 100%|██████████████████████████████████████████████████████████████████████████████| 6839/6839 [00:04<00:00, 1493.26images/s]
+clips count: 224
+frames count: 6839
+calc video features: 100%|███████████████████████████████████████████████████████████████████████████████| 1120/1120 [00:13<00:00, 81.13files/s]
+feat count: 31011
+calc video features: 100%|█████████████████████████████████████████████████████████████████████████████████| 224/224 [00:02<00:00, 81.74files/s]
+feat count: 6397
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+-- Epoch 1
+-- Epoch 1
+-- Epoch 1
+-- Epoch 1
+Norm: 12.46, NNZs: 4454, Bias: -91.731130, T: 31011, Avg. loss: 6.500645
+Total training time: 0.60 seconds.
+-- Epoch 2
+Norm: 17.60, NNZs: 4454, Bias: -103.570817, T: 31011, Avg. loss: 9.242605
+Total training time: 0.62 seconds.
+-- Epoch 2
+Norm: 18.29, NNZs: 4454, Bias: -99.815063, T: 31011, Avg. loss: 9.517669
+Total training time: 0.63 seconds.
+-- Epoch 2
+Norm: 12.97, NNZs: 4454, Bias: -104.479757, T: 31011, Avg. loss: 7.080345
+Total training time: 0.64 seconds.
+-- Epoch 2
+Norm: 12.06, NNZs: 4454, Bias: -90.286817, T: 62022, Avg. loss: 0.738479
+Total training time: 1.21 seconds.
+-- Epoch 3
+Norm: 17.37, NNZs: 4454, Bias: -96.420721, T: 62022, Avg. loss: 2.350332
+Total training time: 1.23 seconds.
+-- Epoch 3
+Norm: 16.95, NNZs: 4454, Bias: -100.510750, T: 62022, Avg. loss: 2.224580
+Total training time: 1.23 seconds.
+-- Epoch 3
+Norm: 12.45, NNZs: 4454, Bias: -102.927759, T: 62022, Avg. loss: 1.096738
+Total training time: 1.24 seconds.
+-- Epoch 3
+Norm: 17.21, NNZs: 4454, Bias: -94.406240, T: 93033, Avg. loss: 2.190624
+Total training time: 1.69 seconds.
+-- Epoch 4
+Norm: 11.88, NNZs: 4454, Bias: -89.441956, T: 93033, Avg. loss: 0.679345
+Total training time: 1.72 seconds.
+-- Epoch 4
+Norm: 16.74, NNZs: 4454, Bias: -98.684399, T: 93033, Avg. loss: 2.054802
+Total training time: 1.78 seconds.
+-- Epoch 4
+Norm: 12.31, NNZs: 4454, Bias: -102.004153, T: 93033, Avg. loss: 1.034543
+Total training time: 1.78 seconds.
+-- Epoch 4
+Norm: 16.95, NNZs: 4454, Bias: -93.009245, T: 124044, Avg. loss: 2.078511
+Total training time: 2.30 seconds.
+-- Epoch 5
+Norm: 11.75, NNZs: 4454, Bias: -88.844637, T: 124044, Avg. loss: 0.639155
+Total training time: 2.33 seconds.
+-- Epoch 5
+Norm: 16.56, NNZs: 4454, Bias: -97.406475, T: 124044, Avg. loss: 1.981066
+Total training time: 2.41 seconds.
+-- Epoch 5
+Norm: 12.23, NNZs: 4454, Bias: -101.350522, T: 124044, Avg. loss: 1.013207
+Total training time: 2.42 seconds.
+-- Epoch 5
+Norm: 11.66, NNZs: 4454, Bias: -88.381380, T: 155055, Avg. loss: 0.623907
+Total training time: 2.88 seconds.
+[Parallel(n_jobs=4)]: Done   1 tasks      | elapsed:    2.9s
+-- Epoch 1
+Norm: 16.76, NNZs: 4454, Bias: -91.930008, T: 155055, Avg. loss: 2.028077
+Total training time: 2.89 seconds.
+[Parallel(n_jobs=4)]: Done   2 out of   7 | elapsed:    2.9s remaining:    7.2s
+-- Epoch 1
+Norm: 12.14, NNZs: 4454, Bias: -100.847376, T: 155055, Avg. loss: 0.973417
+Total training time: 2.95 seconds.
+[Parallel(n_jobs=4)]: Done   3 out of   7 | elapsed:    3.0s remaining:    3.9s
+-- Epoch 1
+Norm: 16.45, NNZs: 4454, Bias: -96.412149, T: 155055, Avg. loss: 1.920174
+Total training time: 2.95 seconds.
+[Parallel(n_jobs=4)]: Done   4 out of   7 | elapsed:    3.0s remaining:    2.2s
+Norm: 13.95, NNZs: 4454, Bias: -87.465441, T: 31011, Avg. loss: 6.735813
+Total training time: 0.46 seconds.
+-- Epoch 2
+Norm: 16.44, NNZs: 4454, Bias: -89.205628, T: 31011, Avg. loss: 9.347439
+Total training time: 0.61 seconds.
+-- Epoch 2
+Norm: 18.32, NNZs: 4454, Bias: -97.022809, T: 31011, Avg. loss: 10.450373
+Total training time: 0.59 seconds.
+-- Epoch 2
+Norm: 13.12, NNZs: 4454, Bias: -85.341283, T: 62022, Avg. loss: 1.419528
+Total training time: 0.95 seconds.
+-- Epoch 3
+Norm: 15.94, NNZs: 4454, Bias: -85.927053, T: 62022, Avg. loss: 2.182780
+Total training time: 1.10 seconds.
+-- Epoch 3
+Norm: 17.48, NNZs: 4454, Bias: -93.218729, T: 62022, Avg. loss: 2.831444
+Total training time: 1.09 seconds.
+-- Epoch 3
+Norm: 12.83, NNZs: 4454, Bias: -84.080438, T: 93033, Avg. loss: 1.321982
+Total training time: 1.48 seconds.
+-- Epoch 4
+Norm: 15.66, NNZs: 4454, Bias: -83.995926, T: 93033, Avg. loss: 1.972736
+Total training time: 1.63 seconds.
+-- Epoch 4
+Norm: 17.27, NNZs: 4454, Bias: -90.952694, T: 93033, Avg. loss: 2.626737
+Total training time: 1.63 seconds.
+-- Epoch 4
+Norm: 12.70, NNZs: 4454, Bias: -83.176958, T: 124044, Avg. loss: 1.265234
+Total training time: 1.99 seconds.
+-- Epoch 5
+Norm: 15.52, NNZs: 4454, Bias: -82.634660, T: 124044, Avg. loss: 1.895429
+Total training time: 2.21 seconds.
+-- Epoch 5
+Norm: 16.97, NNZs: 4454, Bias: -89.381181, T: 124044, Avg. loss: 2.502567
+Total training time: 2.25 seconds.
+-- Epoch 5
+Norm: 12.57, NNZs: 4454, Bias: -82.479064, T: 155055, Avg. loss: 1.234370
+Total training time: 2.47 seconds.
+[Parallel(n_jobs=4)]: Done   5 out of   7 | elapsed:    5.4s remaining:    2.1s
+Norm: 15.34, NNZs: 4454, Bias: -81.596828, T: 155055, Avg. loss: 1.822870
+Total training time: 2.74 seconds.
+Norm: 16.86, NNZs: 4454, Bias: -88.146486, T: 155055, Avg. loss: 2.430533
+Total training time: 2.72 seconds.
+[Parallel(n_jobs=4)]: Done   7 out of   7 | elapsed:    5.7s finished
+/home/specialo0/miniconda3/envs/obuchaem/lib/python3.9/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+  warnings.warn(
+
+     ***  Metrics by frames    ***
+              precision    recall  f1-score   support
+
+           2       0.39      0.46      0.42       947
+           3       0.57      0.71      0.63       867
+           4       0.42      0.51      0.46       966
+           5       0.58      0.38      0.46       939
+           6       0.36      0.43      0.39       884
+           7       0.49      0.58      0.53       950
+           8       0.34      0.10      0.15       844
+
+    accuracy                           0.45      6397
+   macro avg       0.45      0.45      0.43      6397
+weighted avg       0.45      0.45      0.44      6397
+
+Confusion matrix
+ [[438 258  95   2  53  42  59]
+ [133 615  10  14  52  20  23]
+ [132  53 492  21  82 168  18]
+ [ 78  25 147 357 163 158  11]
+ [ 82  47 178  30 376 131  40]
+ [ 75   1 163 111  44 548   8]
+ [198  74  77  77 282  55  81]]
+Normalized confusion matrix
+ [[0.46 0.27 0.1  0.   0.06 0.04 0.06]
+ [0.15 0.71 0.01 0.02 0.06 0.02 0.03]
+ [0.14 0.05 0.51 0.02 0.08 0.17 0.02]
+ [0.08 0.03 0.16 0.38 0.17 0.17 0.01]
+ [0.09 0.05 0.2  0.03 0.43 0.15 0.05]
+ [0.08 0.   0.17 0.12 0.05 0.58 0.01]
+ [0.23 0.09 0.09 0.09 0.33 0.07 0.1 ]]
+
+     ***  Metrics by clips    ***
+/home/specialo0/miniconda3/envs/obuchaem/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precisionand F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/specialo0/miniconda3/envs/obuchaem/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precisionand F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/specialo0/miniconda3/envs/obuchaem/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precisionand F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+              precision    recall  f1-score   support
+
+           2       0.60      0.56      0.58        32
+           3       0.71      1.00      0.83        32
+           4       0.54      0.59      0.57        32
+           5       0.57      0.62      0.60        32
+           6       0.39      0.59      0.47        32
+           7       0.60      0.56      0.58        32
+           8       0.00      0.00      0.00        32
+
+    accuracy                           0.56       224
+   macro avg       0.49      0.56      0.52       224
+weighted avg       0.49      0.56      0.52       224
+
+Confusion matrix
+ [[18 13  0  0  1  0  0]
+ [ 0 32  0  0  0  0  0]
+ [ 3  0 19  0  4  6  0]
+ [ 0  0  3 20  6  3  0]
+ [ 1  0  9  0 19  3  0]
+ [ 2  0  1  8  3 18  0]
+ [ 6  0  3  7 16  0  0]]
+Normalized confusion matrix
+ [[0.56 0.41 0.   0.   0.03 0.   0.  ]
+ [0.   1.   0.   0.   0.   0.   0.  ]
+ [0.09 0.   0.59 0.   0.12 0.19 0.  ]
+ [0.   0.   0.09 0.62 0.19 0.09 0.  ]
+ [0.03 0.   0.28 0.   0.59 0.09 0.  ]
+ [0.06 0.   0.03 0.25 0.09 0.56 0.  ]
+ [0.19 0.   0.09 0.22 0.5  0.   0.  ]]
+(obuchaem) specialo0@DESKTOP-UFQ15AK:~/notebooks/uchебновое/neural_n/labs$
