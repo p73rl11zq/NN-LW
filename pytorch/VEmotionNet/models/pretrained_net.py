@@ -2,8 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from pytorch.common.losses import *
-
+from ...common.losses import *
 
 class FeatureExtractor(nn.Module):
     def __init__(self, submodule, extracted_layers):

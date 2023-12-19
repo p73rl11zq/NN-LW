@@ -13,11 +13,6 @@ import numpy as np
 from src.utils import get_data, calc_features, classification
 from src.accuracy import Accuracy
 
-
-experiment_name = "exp_1"
-max_num_clips = 0  # загружайте только часть данных для отладки кода
-use_dump = False  # используйте dump для быстрой загрузки рассчитанных фич из файла
-
 mode = 1
 base_dir = Path("/home/specialo0/notebooks/data/uchebnoe/neural_n/")
 
@@ -34,6 +29,9 @@ elif mode == 2:
 else:
     raise (ValueError('mode is to be in 1 or 2'))
 
+experiment_name = "/home/specialo0/notebooks/uchебновое/neural_n/labs/labs/video_feature_classification/exp_1"
+max_num_clips = 0  # загружайте только часть данных для отладки кода
+
 train_data = get_data(train_dataset_root, train_file_list, max_num_clips=0)
 test_data = get_data(test_dataset_root, test_file_list, max_num_clips=0)
 
@@ -42,6 +40,7 @@ train_feat, train_targets = calc_features(train_data)
 test_feat, test_targets = calc_features(test_data)
 
 accuracy_fn = Accuracy(test_data, experiment_name=experiment_name)
+
 
 classification(
             train_feat,

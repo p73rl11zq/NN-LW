@@ -1,6 +1,6 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.decomposition import PCA
+
 from sklearn import svm
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import SGDClassifier

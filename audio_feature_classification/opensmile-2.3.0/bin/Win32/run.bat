@@ -1,0 +1,2 @@
+#cd C:\AVER\opensmile-2.3.0
+C:/AVER/opensmile-2.3.0/bin/Win32/SMILExtract_Release -I \\\\blade-nid-01\kalinovskiy\Ryerson\Sound\Audio\Actor_01\03-02-01-01-01-01-01.wav -C C:/AVER/opensmile-2.3.0\config\MFCC12_0_D_A.conf --csvoutput \\\\blade-nid-01\kalinovskiy\Ryerson_crop\Sound\Audio\Actor_01\03-02-01-01-01-01-01.wav.csv

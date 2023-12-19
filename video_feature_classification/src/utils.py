@@ -11,6 +11,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 import numpy as np
+from sklearn.decomposition import PCA
 
 from src.accuracy import Accuracy
 from pytorch.common.datasets_parsers.av_parser import AVDBParser

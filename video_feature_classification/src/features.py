@@ -24,15 +24,20 @@ def feature_extractor(data, mode = 1):
         for i in progresser:
             clip = data[i]
             for sample in clip.data_samples:
+                # find set of descriptors
                 image = np.pad(sample.image, ((padding * 2, padding * 2), (padding * 2, padding * 2), (0, 0)),
                             'constant', constant_values=0)
                 image = image.astype(dtype=np.uint8)
+                # landmarks already found, no need ord.detect()
                 kps = []
                 for landmark in sample.landmarks:
+                    # wrap landmarks in cv2.KeyPoint data structure
                     kps.append(cv.KeyPoint(
                         landmark[0] + padding, landmark[1] + padding, radius))
+                # compute the descriptors with ORB
                 kp, descr = orb.compute(image, kps)
 
+                # calculate distance for landmarks
                 pwdist = sc.spatial.distance.pdist(np.asarray(sample.landmarks))
                 feat.append(np.hstack((descr.ravel(), pwdist.ravel())))
 
