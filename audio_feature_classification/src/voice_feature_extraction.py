@@ -34,7 +34,8 @@ class OpenSMILE:
                 print("ffmpeg version ", ffmpeg_version)
 
         try:
-            command = self.opensmile_dir + "/build/progsrc/smilextract/SMILExtract -h"
+            #command = self.opensmile_dir + "/build/progsrc/smilextract/SMILExtract -h"
+            command = self.opensmile_dir + "/bin/linux_x64_standalone_static/SMILExtract -h"
             output = subprocess.check_output(
                 command, shell=True, stderr=subprocess.STDOUT
             )
@@ -57,7 +58,8 @@ class OpenSMILE:
         ## example: SMILExtract -I output.wav -C ./openSMILE-2.1.0/config/gemaps/GeMAPSv01a.conf --csvoutput features.csv
         ##----------------------------------------------------------
         features_file = os.path.dirname(wav_path) + "/temp.csv"
-        command = "{opensmile_dir}/build/progsrc/smilextract/SMILExtract -I {input_file} -C {conf_file} --csvoutput {output_file}".format(
+        #command = "{opensmile_dir}/build/progsrc/smilextract/SMILExtract -I {input_file} -C {conf_file} --csvoutput {output_file}".format(
+        command = "{opensmile_dir}/bin/linux_x64_standalone_static/SMILExtract -I {input_file} -C {conf_file} --csvoutput {output_file}".format(
             opensmile_dir=self.opensmile_dir,
             input_file=wav_path,
             conf_file=self.opensmile_conf,

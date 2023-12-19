@@ -29,21 +29,6 @@ def set_model(X_train, X_test, y_train, mode = 'rf'):
         sgd_clf.fit(X_train_scaled, y_train)
         y_pred = sgd_clf.predict(X_test_scaled)
 
-    elif mode == 'mlp':
-        scaler = StandardScaler()
-        X_train_scaled = scaler.fit_transform(X_train)
-        X_test_scaled = scaler.transform(X_test)
-
-        clf = MLPClassifier(
-            solver='adam',
-            alpha=1e-5,
-            activation='relu',
-            hidden_layer_sizes=(100, 100, 100, 100, 100),
-            random_state=42
-            )
-        clf.fit(X_train_scaled, y_train)
-        y_pred = sgd_clf.predict(X_test_scaled)
-
     elif mode == 'svc':
         clf = svm.SVC(decision_function_shape='ovo')
         clf.fit(X_train, y_train)
@@ -51,6 +36,5 @@ def set_model(X_train, X_test, y_train, mode = 'rf'):
 
     else:
         print(" 'mode' option is to be in ['rf', 'sgd', 'mlp', 'svc'] ")
-        break
 
     return y_pred

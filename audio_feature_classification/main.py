@@ -14,9 +14,9 @@ from pytorch.common.datasets_parsers.av_parser import AVDBParser
 
 
 if __name__ == "__main__":
-    experiment_name = "exp_1"
+    experiment_name = "exp_4"
     max_num_clips = 0  # загружайте только часть данных для отладки кода (0 - все данные)
-    use_dump = False  # используйте dump для быстрой загрузки рассчитанных фич из файла
+    use_dump = True  # используйте dump для быстрой загрузки рассчитанных фич из файла
 
     # dataset dir
     mode = 1
@@ -36,41 +36,30 @@ if __name__ == "__main__":
         raise (ValueError('mode is to be in 1 or 2'))
 
     # opensmile configuration
-    opensmile_root_dir = Path("/home/galahad/Documents/6_course/neural_networks/opensmile")
-    # TODO: поэкспериментируйте с различными конфигурационными файлами библиотеки OpenSmile
-    # opensmile_config_path = opensmile_root_dir / "config/avec11-14/avec2013.conf"
-    opensmile_config_path = opensmile_root_dir / "config/egemaps/v02/eGeMAPSv02.conf"
+    opensmile_root_dir = Path("/home/specialo0/notebooks/uchебновое/neural_n/labs/labs/audio_feature_classification/opensmile-2.3.0")
 
+    # TODO: поэкспериментируйте с различными конфигурационными файлами библиотеки OpenSmile
+    #opensmile_config_path = opensmile_root_dir / "config/avec2013.conf"
+    #opensmile_config_path = opensmile_root_dir / "config/audspec.conf"
+    opensmile_config_path = opensmile_root_dir / "config/gemaps/GeMAPSv01a.conf"
     if not use_dump:
         # load dataset
-        train_data = get_data(
-            train_dataset_root, train_file_list, max_num_clips=max_num_clips
-        )
-        test_data = get_data(
-            test_dataset_root, test_file_list, max_num_clips=max_num_clips
-        )
+        train_data = get_data(train_dataset_root, train_file_list, max_num_clips=max_num_clips)
+        test_data = get_data(test_dataset_root, test_file_list, max_num_clips=max_num_clips)
 
         # get features
-        train_feat, train_targets = calc_features(
-            train_data, opensmile_root_dir, opensmile_config_path
-        )
-        test_feat, test_targets = calc_features(
-            test_data, opensmile_root_dir, opensmile_config_path
-        )
+        train_feat, train_targets = calc_features(train_data, opensmile_root_dir, opensmile_config_path)
+        test_feat, test_targets = calc_features(test_data, opensmile_root_dir, opensmile_config_path)
 
         accuracy_fn = Accuracy(test_data, experiment_name=experiment_name)
 
-        with open(experiment_name + ".pickle", "wb") as f:
+        with open("/home/specialo0/notebooks/uchебновое/neural_n/labs/labs/audio_feature_classification/" + experiment_name + ".pickle", "wb") as f:
             pickle.dump(
                 [train_feat, train_targets, test_feat, test_targets, accuracy_fn],
-                f,
-                protocol=2,
-            )
+                f, protocol=2,)
     else:
-        with open(experiment_name + ".pickle", "rb") as f:
-            train_feat, train_targets, test_feat, test_targets, accuracy_fn = pickle.load(
-                f
-            )
+        with open("/home/specialo0/notebooks/uchебновое/neural_n/labs/labs/audio_feature_classification/" + experiment_name + ".pickle", "rb") as f:
+            train_feat, train_targets, test_feat, test_targets, accuracy_fn = pickle.load(f)
 
     # run classifiers
     classification(

@@ -9,12 +9,13 @@ from pathlib import Path
 
 import numpy as np
 
-from accuracy import Accuracy
+
 from tqdm import tqdm
-from voice_feature_extraction import OpenSMILE
 
 from pytorch.common.datasets_parsers.av_parser import AVDBParser
-from models import *
+from src.voice_feature_extraction import OpenSMILE
+from src.accuracy import Accuracy
+from src.models import *
 
 
 def get_data(dataset_root, file_list, max_num_clips: int = 0):
@@ -64,6 +65,6 @@ def classification(X_train, X_test, y_train, y_test, accuracy_fn, pca_dim: int =
     random.shuffle(combined)
     X_train[:], y_train[:] = zip(*combined)
 
-    y_pred = set_model(X_train, X_test, y_train, mode = 'rf')
+    y_pred = set_model(X_train, X_test, y_train, mode = 'sgd')
 
     accuracy_fn.by_clips(y_pred)
